@@ -30,18 +30,20 @@ public class MatrixMath {
 		return a;
 	}
 	
-	/*
+	
 	public static Matrix matrixMult(Matrix a, Matrix b) throws SizeMismatchException{
 		if(a.columns() == b.rows()){
-			Matrix c = new Matrix(a.rows(), b.columns());
+			Matrix result = new Matrix(a.rows(), b.columns());
 			
-			// TODO Matrix Multiplication
+			for(int i=0; i<a.rows(); i++)
+				for(int j=0; j<b.columns(); j++)
+					result.data[i][j] = VectorMath.vectorDot(a.rowToVector(i), b.columnToVector(j));
 			
-			return c;
+			return result;
 			
 		}else throw new SizeMismatchException();
 		
 	}
-	*/
+	
 
 }

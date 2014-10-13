@@ -54,19 +54,17 @@ public class Matrix{
 		return data[0].length;
 	}
 	
-	// TODO rowToVector
-	/*
 	public Vector rowToVector(int row){
-		
+		return new Vector(data[row]);
 	}
-	*/
 	
-	// TODO columnToVector
-	/*
+
 	public Vector columnToVector(int col){
-	
+		double[] column = new double[this.rows()];
+		for(int i=0; i<this.rows(); i++)
+			column[i] = data[i][col];
+		return new Vector(column);
 	}
-	*/
 	
 }
 

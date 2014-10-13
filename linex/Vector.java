@@ -22,4 +22,10 @@ public class Vector {
 		return data.length; 
 	}
 	
+	public void print(){
+		for(int i=0; i<this.size(); i++)
+			System.out.print(data[i]+"\t");
+		System.out.println();
+	}
+	
 }
